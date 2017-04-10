@@ -1,0 +1,10 @@
+home
+nature
+gym
+pool
+stasis
+town
+shop
+yard
+terrace
+park

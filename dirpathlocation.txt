@@ -1,0 +1,5 @@
+# in 5.th line enter correct directory path for storing all txt files
+# don't forget ending /
+# example for Unix: /home/josifoski/elevens/ if you leave 5.th line empty then default dir will be where executable is
+# example for Windows: D:\elevens\
+

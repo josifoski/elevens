@@ -1,0 +1,12 @@
+sbike
+mbike
+walking
+jumprope
+running
+jogging
+swimming
+chess
+snowclean
+gardening
+strength
+streching
