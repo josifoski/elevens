@@ -244,6 +244,7 @@ end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
+  if trim(Edit3.Text) <> '' then Button1Click(Button1);
   rewrite(fdb);
   writeln(fdb, trim(SynEdit11.Text));
   Edit1.Text:='';
