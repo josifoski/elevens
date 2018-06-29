@@ -105,6 +105,7 @@ begin
     Form1.SynEdit11.Append(SynEdit1.Lines[i]);
   SynEdit1.Clear;
   motempsum:= 0;
+  Label4.Caption:= 'Sum = ' + FloatToStr(motempsum);
   Form1.Button2Click(Button2);
 end;
 
@@ -165,6 +166,8 @@ end;
 procedure TForm5.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   SynEdit1.Clear;
+  motempsum:= 0;
+  Label4.Caption:= 'Sum = ' + FloatToStr(motempsum);
 end;
 
 end.

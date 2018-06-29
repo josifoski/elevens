@@ -9,7 +9,7 @@ object Form5: TForm5
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.4'
   object ComboBox1: TComboBox
     Left = 6
     Height = 29
@@ -46,7 +46,7 @@ object Form5: TForm5
     Left = 256
     Height = 17
     Top = 414
-    Width = 61
+    Width = 58
     Caption = 'Quantity'
     ParentColor = False
   end
@@ -73,7 +73,7 @@ object Form5: TForm5
     Left = 448
     Height = 17
     Top = 414
-    Width = 55
+    Width = 54
     Caption = 'Product'
     ParentColor = False
   end
@@ -114,6 +114,7 @@ object Form5: TForm5
     ParentColor = False
     ParentFont = False
     TabOrder = 8
+    Gutter.Visible = False
     Gutter.Width = 57
     Gutter.MouseActions = <>
     RightGutter.Width = 0
@@ -545,6 +546,7 @@ object Form5: TForm5
     Lines.Strings = (
       ''
     )
+    Options = [eoAutoIndent, eoBracketHighlight, eoGroupUndo, eoHideRightMargin, eoScrollPastEol, eoSmartTabs, eoTabsToSpaces, eoTrimTrailingSpaces]
     VisibleSpecialChars = [vscSpace, vscTabAtLast]
     SelectedColor.BackPriority = 50
     SelectedColor.ForePriority = 50
@@ -602,7 +604,7 @@ object Form5: TForm5
   end
   object Label4: TLabel
     Left = 704
-    Height = 19
+    Height = 20
     Top = 376
     Width = 52
     Caption = 'Sum = '

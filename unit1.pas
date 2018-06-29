@@ -24,6 +24,8 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
     Edit7: TEdit;
     Edit8: TEdit;
     Edit9: TEdit;
@@ -36,6 +38,8 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
     Label9: TLabel;
     MenuItem1: TMenuItem;
     PopupMenu1: TPopupMenu;
@@ -144,7 +148,7 @@ var
 
 begin
   blinenums:= False;
-  keyByZeroColumn:= 2;
+  keyByZeroColumn:= 4;
   memprevcombo1:= True;
   memprevcombo3:= True;
   juststarted:= True;
@@ -154,7 +158,8 @@ begin
   ComboBox5.ItemIndex:= 0;
   Label12.Caption:= '';
   sensitivity:= False;
-  SynEdit11.LineHighlightColor.Background:=clHighLight;
+  //SynEdit11.LineHighlightColor.Background:=clHighLight;
+  SynEdit11.LineHighlightColor.Background:=clSkyBlue;
 
   // read dirpathlocation.txt
   AssignFile(fdirpath, 'dirpathlocation.txt');
@@ -224,9 +229,14 @@ var
   s: String;
 begin
   if trim(Edit1.Text) = '' then Edit1.Text:= '/';
+  if trim(Edit4.Text) = '' then Edit4.Text:= '/';
+  if trim(Edit5.Text) = '' then Edit5.Text:= '/';
+
   s:= trim(Edit2.Text) + ' '  +
     trim(ComboBox7.Text) + ' ' +
-    myformat(trim(Edit1.Text), 'l', ' ', 5) + ' ' +
+    myformat(trim(Edit4.Text), 'l', ' ', 6) +
+    myformat(trim(Edit5.Text), 'l', ' ', 6) +
+    myformat(trim(Edit1.Text), 'l', ' ', 6) +
     myformat(trim(ComboBox3.Text), 'l', ' ', 11);
   if Edit3.Text <> '' then
     s:= s + ' ' + trim(Edit3.Text);
@@ -238,6 +248,8 @@ begin
   SynEdit11.Append(LeftPart);
   Edit1.Text:='';
   Edit3.Text:='';
+  Edit4.Text:='';
+  Edit5.Text:='';
   ComboBox3.ItemIndex:= 0;
   Form1.Button2.Font.Color:= clRed;
 end;
@@ -249,6 +261,8 @@ begin
   writeln(fdb, trim(SynEdit11.Text));
   Edit1.Text:='';
   Edit3.Text:='';
+  Edit4.Text:='';
+  Edit5.Text:='';
   CloseFile(fdb);
   Button2.Font.Color:= clDefault;
 end;
@@ -376,7 +390,7 @@ var
   i, j, k, linesf, itry, statcol: Integer;
   taminutes: Integer;
   ftry: Real;
-  myfmt, linenumber: String;
+  myfmt, linenumber, l2scmo: String;
 begin
   if trim(Edit9.Text) <> '' then begin
     if ComboBox5.ItemIndex = 0 then sf:='s';
@@ -452,9 +466,12 @@ begin
 
         if bpass then
           if List2.Count >= statcol then begin
-            if (sf = 's') or (sf = 'a') then
+            l2scmo:= List2[statcol - 1];
+            if (sf = 's') or (sf = 'a') then begin
+                if copy(l2scmo, 1, 1) = '$' then List2[statcol - 1]:= copy(l2scmo, 2, length(l2scmo) -1);
                 TryStrToFloat(List2[statcol - 1], ftry);
-                total:= total + ftry;
+            end;
+            total:= total + ftry;
             if (sf = 'ta') or (sf = 'tt') then
               if List2[statcol - 1] <> '/' then
                 taminutes:= taminutes + Convert2minutes(List2[statcol - 1], j, line, Form1);

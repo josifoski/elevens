@@ -1,5 +1,5 @@
 object Form1: TForm1
-  Left = 302
+  Left = 259
   Height = 702
   Top = 39
   Width = 943
@@ -11,7 +11,7 @@ object Form1: TForm1
   OnCreate = FormCreate
   OnResize = FormResize
   Position = poScreenCenter
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.8.0.4'
   Visible = True
   WindowState = wsMaximized
   object Label1: TLabel
@@ -36,7 +36,7 @@ object Form1: TForm1
     Text = 'ComboBox1'
   end
   object Label3: TLabel
-    Left = 357
+    Left = 535
     Height = 17
     Top = 592
     Width = 43
@@ -44,18 +44,19 @@ object Form1: TForm1
     ParentColor = False
   end
   object Edit1: TEdit
-    Left = 283
+    Left = 456
     Height = 27
-    Top = 616
+    Top = 618
     Width = 67
-    TabOrder = 2
+    Color = clYellow
+    TabOrder = 4
   end
   object Edit3: TEdit
     Left = 8
     Height = 27
     Top = 664
     Width = 804
-    TabOrder = 4
+    TabOrder = 6
   end
   object Label4: TLabel
     Left = 8
@@ -66,10 +67,10 @@ object Form1: TForm1
     ParentColor = False
   end
   object Label5: TLabel
-    Left = 283
+    Left = 456
     Height = 17
-    Top = 592
-    Width = 62
+    Top = 594
+    Width = 59
     Caption = 'Effective'
     ParentColor = False
   end
@@ -80,14 +81,14 @@ object Form1: TForm1
     Width = 85
     Caption = 'Append'
     OnClick = Button1Click
-    TabOrder = 5
+    TabOrder = 7
   end
   object Edit2: TEdit
     Left = 112
     Height = 27
     Top = 528
     Width = 100
-    TabOrder = 8
+    TabOrder = 10
   end
   object Label2: TLabel
     Left = 112
@@ -104,10 +105,10 @@ object Form1: TForm1
     Width = 85
     Caption = 'Save'
     OnClick = Button2Click
-    TabOrder = 6
+    TabOrder = 8
   end
   object ComboBox3: TComboBox
-    Left = 357
+    Left = 535
     Height = 29
     Top = 616
     Width = 234
@@ -115,7 +116,7 @@ object Form1: TForm1
     AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
     ItemHeight = 0
     OnEditingDone = ComboBox3EditingDone
-    TabOrder = 3
+    TabOrder = 5
     Text = 'ComboBox3'
   end
   object Edit7: TEdit
@@ -124,7 +125,7 @@ object Form1: TForm1
     Top = 528
     Width = 100
     OnKeyDown = Edit7KeyDown
-    TabOrder = 7
+    TabOrder = 9
   end
   object Label9: TLabel
     Left = 8
@@ -145,7 +146,7 @@ object Form1: TForm1
     Font.Quality = fqNonAntialiased
     ParentColor = False
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 16
     OnKeyDown = SynEdit11KeyDown
     Gutter.Visible = False
     Gutter.Width = 57
@@ -641,7 +642,7 @@ object Form1: TForm1
     Left = 216
     Height = 17
     Top = 504
-    Width = 105
+    Width = 104
     Caption = 'Filter keywords'
     ParentColor = False
   end
@@ -651,7 +652,7 @@ object Form1: TForm1
     Top = 528
     Width = 380
     OnKeyDown = Edit8KeyDown
-    TabOrder = 9
+    TabOrder = 11
   end
   object ComboBox5: TComboBox
     Left = 608
@@ -665,7 +666,7 @@ object Form1: TForm1
       'TimeAverage'
       'TimeTotal'
     )
-    TabOrder = 10
+    TabOrder = 12
     Text = 'ComboBox5'
   end
   object Edit9: TEdit
@@ -674,13 +675,13 @@ object Form1: TForm1
     Top = 528
     Width = 32
     OnKeyDown = Edit9KeyDown
-    TabOrder = 11
+    TabOrder = 13
   end
   object Label11: TLabel
     Left = 752
     Height = 17
     Top = 504
-    Width = 53
+    Width = 51
     Caption = 'Column'
     ParentColor = False
   end
@@ -691,7 +692,7 @@ object Form1: TForm1
     Width = 62
     Caption = 'Filter'
     OnChange = CheckBox1Change
-    TabOrder = 13
+    TabOrder = 15
   end
   object Label12: TLabel
     Left = 8
@@ -707,10 +708,10 @@ object Form1: TForm1
     Left = 833
     Height = 24
     Top = 504
-    Width = 96
+    Width = 94
     Caption = 'Csensitive'
     OnChange = CheckBox3Change
-    TabOrder = 12
+    TabOrder = 14
   end
   object ComboBox7: TComboBox
     Left = 176
@@ -725,14 +726,44 @@ object Form1: TForm1
     Left = 176
     Height = 17
     Top = 592
-    Width = 57
+    Width = 55
     Caption = 'Account'
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    Left = 280
+    Height = 27
+    Top = 618
+    Width = 80
+    TabOrder = 2
+  end
+  object Edit5: TEdit
+    Left = 368
+    Height = 27
+    Top = 618
+    Width = 80
+    TabOrder = 3
+  end
+  object Label6: TLabel
+    Left = 280
+    Height = 17
+    Top = 594
+    Width = 36
+    Caption = 'From'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 368
+    Height = 17
+    Top = 594
+    Width = 16
+    Caption = 'To'
     ParentColor = False
   end
   object MyTrayIcon: TTrayIcon
     PopUpMenu = PopupMenu1
     OnClick = MyTrayIconClick
-    left = 784
+    left = 744
     top = 568
   end
   object PopupMenu1: TPopupMenu
