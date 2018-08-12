@@ -138,7 +138,7 @@ begin
   if length(smonth) = 1 then smonth:= '0' + smonth;
   sday:= IntToStr(Day);
   if length(sday) = 1 then sday:= '0' + sday;
-  todaydate:= syear + smonth + sday;
+  todaydate:= syear + smonth + sday ;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
